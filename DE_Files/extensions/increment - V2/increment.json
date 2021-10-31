@@ -1,0 +1,83 @@
+{
+  "allowHttpBackend": false,
+  "backendCommand": "back.bat",
+  "backendFolderName": "C:\\Users\\guill\\Desktop\\project\\increment",
+  "certificateExceptions": [],
+  "extensionViews": [
+    {
+      "channelId": "721280294",
+      "configurationAnchor": "panel",
+      "displayChannelName": "gh_dsti",
+      "features": {
+        "isBitsEnabled": false,
+        "isChatEnabled": false,
+        "isSubscriptionStatusAvailable": false
+      },
+      "frameSize": {
+        "width": 1280,
+        "height": 720
+      },
+      "id": "1",
+      "isPopout": false,
+      "label": "1",
+      "linked": false,
+      "linkedUserId": "",
+      "orientation": "Portrait",
+      "type": "panel",
+      "viewerType": "Broadcaster"
+    }
+  ],
+  "manifest": {
+    "anchor": "panel",
+    "assetUrls": [],
+    "authorName": "gh_dsti",
+    "bitsEnabled": false,
+    "canInstall": true,
+    "configUrl": "https://localhost:8080/config.html",
+    "configurationLocation": "none",
+    "description": "",
+    "eulaTosUrl": "",
+    "hasChatSupport": false,
+    "iconUrl": "",
+    "iconUrls": {},
+    "id": "l1bhofmgq6nul6piw2fygia6q8q0mq",
+    "installationCount": -42,
+    "liveConfigUrl": "",
+    "name": "increment",
+    "panelHeight": 300,
+    "privacyPolicyUrl": "",
+    "requestIdentityLink": false,
+    "requiredBroadcasterAbilities": [],
+    "screenshotUrls": [],
+    "sku": "",
+    "state": "Testing",
+    "subscriptionsSupportLevel": "none",
+    "summary": "",
+    "supportEmail": "guillaume.holdorf@edu.dsti.institute",
+    "vendorCode": "",
+    "version": "0.0.1",
+    "viewerSummary": "",
+    "viewerUrl": "https://localhost:8080/panel.html",
+    "viewerUrls": {
+      "panel": "https://localhost:8080/panel.html"
+    },
+    "views": {
+      "panel": {
+        "viewerUrl": "https://localhost:8080/panel.html",
+        "height": 300,
+        "canLinkExternalContent": false
+      },
+      "config": {
+        "viewerUrl": "https://localhost:8080/config.html",
+        "canLinkExternalContent": false
+      }
+    },
+    "whitelistedConfigUrls": [],
+    "whitelistedPanelUrls": []
+  },
+  "frontendCommand": "",
+  "frontendFolderName": "templates",
+  "name": "increment",
+  "usingRandomFrontendHostingPort": false,
+  "version": 3
+}
