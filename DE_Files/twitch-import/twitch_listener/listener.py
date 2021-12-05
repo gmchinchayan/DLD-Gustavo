@@ -1,9 +1,7 @@
-import pandas as pd
 from socket import socket
 from time import time, sleep
 from twitch_listener import utils
 import select
-import re
 import codecs
 import logging
 
