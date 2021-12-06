@@ -68,9 +68,7 @@ class connect_twitch(socket):
 
         self._join_channels(dirname, channels)
         startTime = time()
-        
-
-        
+           
         # Collect data while duration not exceeded and channels are live
         while (time() - startTime) < duration: 
             now = time() # Track loop time for adaptive rate limiting

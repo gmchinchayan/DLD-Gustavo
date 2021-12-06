@@ -38,11 +38,10 @@ def rename_lastfile(logdir, channels):
             
         # for each channel
         for channel in channels:
-            # original filename
+            # rebuild original logfile name
             filename = logdir + '/' + channel + ".log"
            
-            
-            # Retrieve datetime from log files
+            # Retrieve datetime into logfile
             with open(filename,encoding="utf8") as f:
                 # read first line only
                 first_line = f.readline()
