@@ -25,7 +25,7 @@ bot = listener.connect_twitch(twitch_account,
 utils.check_dir(LOGDIR)
 
 # List of channels to connect to
-channels_to_listen_to = ['SypherPK','TheGrefg','VALORANT','Chess',' MontanaBlack88']
+channels_to_listen_to = ['SypherPK','TheGrefg','VALORANT','Chess','MontanaBlack88']
 
 if type(channels_to_listen_to) == str:
     channels_to_listen_to = [channels_to_listen_to]

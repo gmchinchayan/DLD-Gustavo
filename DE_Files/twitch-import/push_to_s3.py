@@ -17,7 +17,7 @@ from time import time, sleep
 # Retreive keys for S3 bucket
 access_key = os.environ['access_key']
 access_secret = os.environ['access_secret']
-access_secret = os.environ['bucket_name']
+bucket_name = os.environ['bucket_name']
 
 # define log directory to look at and how long in seconds
 LOGDIR = 'log'
