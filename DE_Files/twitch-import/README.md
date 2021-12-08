@@ -13,37 +13,6 @@ You need to
 
 Follow the document [](file:..\AWS\twitch-import-AWS.md) for steps 2 to 4
 
-Connect to it and start installation :
-
-# Installation: 
-Unix install on ec2 
-
-install last updates, python3, pip3 and boto3 lib
-git clone your repo
-copy the directory First_test/DE_Files/twitch-import
-remove First_test directory
-change the property of launch.sh
-setup the 2 params access_key and access_secret in environment
-
-```
-sudo apt update
-sudo apt install python3
-sudo apt install python3-pip -y
-pip3 install boto3
-
-git clone <your repo>
-provide your username and the token you've create to access it
-
-cp -R ./First_test/DE_Files/twitch-import ./
-rm -Rf ./First_test/
-cd twitch-import/
-
-chmod a+x *.sh
-export access_key='XXXX'
-export access_secret='XXXX'
-
-```
-
 
 #  usage:
 
