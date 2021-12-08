@@ -30,7 +30,7 @@ def rename_lastfile(logdir, channels):
                 Parameters:
                         logdir (string): 
                                 - log directory where the files are placed
-                        channels (list, optional)     
+                        channels (list)     
                                 - List of channel and text logs 
         '''
         if type(channels) == str:

@@ -6,6 +6,20 @@ import codecs
 import logging
 
 class connect_twitch(socket):
+
+    '''
+    A class to represent a connection to a twitch application
+
+    Attributes
+    ----------
+    nickname : str
+        nickname of the twitch application account you've create
+    oauth : str 
+        oauth credentials for your application
+    client_id : str
+        your application's name
+
+    '''
     
     def __init__(self, nickname, oauth, client_id):
 
@@ -17,6 +31,9 @@ class connect_twitch(socket):
         else:
             self.oauth = 'oauth:' + oauth
 
+
+        # list of bots used by twitch for messaging in the chat
+        # we are not interested in their messages
         self.botlist = ['moobot' 'nightbot', 'ohbot',
                         'deepbot', 'ankhbot', 'vivbot',
                         'wizebot', 'coebot', 'phantombot',
@@ -32,6 +49,18 @@ class connect_twitch(socket):
         
 
     def _join_channels(self, dirname, channels):
+
+        '''
+        Function to initialize a socket per channel and the logging parameters
+
+        Parameters :
+            dirname : str
+                log directory in relative path
+            channels : list
+                list of channels to listen
+        Returns :
+                print when a socket is open
+        '''
 
         self._sockets = {}
         self.joined = []
@@ -56,14 +85,15 @@ class connect_twitch(socket):
 
         """
         Method for scraping chat data from Twitch channels.
+        At the end the socket are closed and logging module is shutdown
 
         Parameters:
-            dirname (string)
+            dirname : string
                 - directory for log files
-            channels (string or list) 
+            channels : list
                 - Channel(s) to connect to.
-            duration (int)           
-                 - Length of time to listen for.
+            duration : int           
+                 - Length of time to listen for in seconds
         """
 
         self._join_channels(dirname, channels)
@@ -73,6 +103,7 @@ class connect_twitch(socket):
         while (time() - startTime) < duration: 
             now = time() # Track loop time for adaptive rate limiting
             ready_socks,_,_ = select.select(self._sockets.values(), [], [], 1)
+
             for channel in self.joined:
                 sock = self._sockets[channel]
 
@@ -94,6 +125,7 @@ class connect_twitch(socket):
             self._sockets[channel].close()
             print("Close channel {0}".format(channel))
         
+        # close the logging module to release the log files
         logging.shutdown()
 
         
