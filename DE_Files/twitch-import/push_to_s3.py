@@ -117,7 +117,7 @@ def init():
     '''
     init Function to start main() and exit properly
     '''
-  if __name__ == '__main__':
-    sys.exit(main())
+    if __name__ == '__main__':
+        sys.exit(main())
 
 init()
