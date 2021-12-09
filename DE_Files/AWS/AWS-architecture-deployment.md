@@ -1,6 +1,6 @@
 # AWS Architecture
 
-![schema](/images/POC_V1-2.JPG)
+![schema](/DE_Files/AWS/images/POC_V1-2.JPG)
 
 
 
