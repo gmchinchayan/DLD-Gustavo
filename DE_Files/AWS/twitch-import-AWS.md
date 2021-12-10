@@ -114,7 +114,7 @@ export twitch_account='XXX'
 export twitch_oauth='XXX'
 export twitch_app='XXX'
 
-cd ./Twitch-import
+cd ./twitch-import
 chmod a+x launch.sh
 ```
 
