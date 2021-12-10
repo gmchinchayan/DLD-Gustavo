@@ -1,0 +1,7 @@
+powershell 'docker login --username AWS -p $(aws ecr get-login-password --region eu-north-1 ) 954227610772.dkr.ecr.eu-north-1.amazonaws.com'
+docker build -t timepredict .
+docker tag timepredict:latest 954227610772.dkr.ecr.eu-north-1.amazonaws.com/timepredict:latest
+docker push 954227610772.dkr.ecr.eu-north-1.amazonaws.com/timepredict:latest
+
+
+
