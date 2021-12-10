@@ -1,0 +1,32 @@
+"This is the Emotes we have added to the VADER lexicon Library, they are the 30 Most common Emotes",,,,
+Emote Code,Meaning - Meme,Sentiment Feeling,Value (-4 to 4),Source
+PogU,Showing positive wide-mouth surprise,Positive,4,Twitch
+Clap,showing admiration,Positive,3,Thirdparty
+FeelsGoodMan,showing satisfaction,Positive,3,Thirdparty
+Kreygasm,sign of join and satisfaction,Positive,3,Thirdparty
+pogchamp,excitement,Positive,3,Twitch
+poggers,express excitement or celebration in a similar manner to the PogChamp,Positive,3,Thirdparty
+seemsgood,showing positivity,Positive,3,Thirdparty
+OMEGALUL,rolling on the floor laughing (lmao!),Positive,2,Thirdparty
+LULW,LOL,Positive,2,Thirdparty
+EZ,something too easy,Positive,2,Thirdparty
+LUL,Its funny,Positive,2,Twitch
+heyguys,showing positive greeting,Positive,2,Twitch
+Pog,expressing satisfaction,Positive,2,Thirdparty
+BOOBA,"indicates when someone is ""hot/sexy"" usually towards women",Positve*,1,Thirdparty
+WAYTOODANK (gif),situation is too over the top (crazy),neutral,0,Thirdparty
+Kappa,convey sarcasm/irony,neutral,0,Twitch
+TRUEING (gif),showing agreement,neutral,0,Thirdparty
+Smorc,Face of an ogre,neutral,0,Twitch
+batchest,sarcasm,neutral,0,Twitch
+monkaS,showing anxiety or sweating,Negative,-2,Thirdparty
+Pepehands,expressing deep sadness,Negative,-2,Thirdparty
+rip,expressing something is over,Negative,-2,Thirdparty
+notlikethis,expressing disapoitnment ,Negative,-2,Twitch
+monkaW,very intense situation,Negative,-3,Thirdparty
+Pepega,when streamer does something stupid,Negative,-3,Thirdparty
+WutFace,expressing shock/belief,Negative,-3,Thirdparty
+feelsbadman,sadness,Negative,-3,Thirdparty
+Sadge,showing sadness/dissapointment,Negative,-4,Thirdparty
+peepoSad,sadness,Negative,-4,Thirdparty
+DansGame,expressing dissatisfaction,Negative,-4,Twitch
