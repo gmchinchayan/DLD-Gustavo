@@ -9,15 +9,6 @@ document.cookie = "flavor=choco; SameSite=None; Secure";
 var twitch = window.Twitch.ext;
 
 
-
-
-function setAuth(token) {
-    Object.keys(requests).forEach((req) => {
-        twitch.rig.log('Setting auth headers');
-        requests[req].headers = {'Authorization': 'Bearer ' + token ,'Content-Type': 'application/json'}
-    });
-}
-
 //run at application launch
 twitch.onContext(function(context) {
     twitch.rig.log(context);
@@ -160,6 +151,15 @@ const config = {
 $(function() {
 
 
+
+    //display graph
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );   
+
+
+
     // listen for incoming broadcast message from our EBS
     twitch.listen('broadcast', function (target, contentType, value) {
         twitch.rig.log('Received broadcast prediction');
@@ -194,11 +194,7 @@ $(function() {
     });
 
     
-    //display graph
-    const myChart = new Chart(
-        document.getElementById('myChart'),
-        config
-      );    
+     
    
 
 });
