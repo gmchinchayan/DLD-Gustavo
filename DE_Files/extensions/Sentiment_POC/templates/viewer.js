@@ -20,7 +20,7 @@ twitch.onAuthorized(function(auth) {
     token = auth.token;
     tuid = auth.userId;
     
-    setAuth(token);    
+       
 });
 
 function updatePred(pred) {
