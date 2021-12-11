@@ -9,7 +9,7 @@ import boto3
 import random
 import json
 
-
+#see notebook for documention
         
 def sliding_windows(data, seq_length):
     x = []
@@ -68,18 +68,11 @@ def get_prediction_from_model(lstm_model,x_values):
 
     return train_predict
   
-"""
-def get_forecast_values(last_date,data_predict,):
-    
-    final_date = pd.to_datetime(last_date) + timedelta(seconds=data_predict.size-1)
-    df_index = pd.date_range(last_date, final_date, freq='1s')
-    forecast_df = pd.DataFrame(data_predict, index=df_index, columns=['Forecast'])
 
-    return forecast_df["Forecast"]
-"""
 
 def lambda_handler(event, context):
 
+    #maximum of predicted point sent to extension
     NB_PREDICTIONS_SENT = 5
 
 
@@ -94,13 +87,13 @@ def lambda_handler(event, context):
 
     num_classes = 1
 
-    
+    #load model from checkpoint (trained model)
     lstm = LSTM(num_classes, input_size, hidden_size, num_layers,seq_length)
     lstm.load_state_dict(torch.load('lstm_model'))
     lstm.eval()
 
-    #event=json.loads(event)
     
+    #processing the data
     df = pd.DataFrame(event["body"]) 
     
     sc = MinMaxScaler()
@@ -111,15 +104,19 @@ def lambda_handler(event, context):
 
     X = Variable(torch.Tensor(np.array(x)))
     
+    #doing the prediction
     train_predict = lstm(X)
     
     data_predict = train_predict.data.numpy()
     data_predict = sc.inverse_transform(data_predict)
     
+    #convert to list
     pred = np.squeeze(data_predict).tolist()
     
+    #log predictions
     print(f'pred:{pred}')
 
+    #send models results to be given the the extension
     lambda_client = boto3.client("lambda")
     response = lambda_client.invoke(
 	FunctionName='broadcast',
