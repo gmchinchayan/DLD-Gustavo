@@ -1,7 +1,7 @@
 # Social-SentimentAnalysis-SmartCensoring
 ![detectledefect](https://user-images.githubusercontent.com/71192682/125970979-148202e9-e7d1-4241-9797-f9db3d322f21.JPG)
 ### Context
-Python Machine Learning Project as part of the DSTI Applied MSc in Data Science and Artificial Intelligence 21 Cohort
+Python Machine Learning Startup as  part of the DSTI Applied MSc in Data Science and Artificial Intelligence 21 Cohort
 
 ### Project Objective
 Gauge live feedback sentiment to help the those producing the live content to drive better quality and improve customer experience.
