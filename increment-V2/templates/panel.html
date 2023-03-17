@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Viewer Page</title>
+</head>
+<body style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+    <div id="app" class="full-height"></div>
+
+    <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+    <!-- If you use any external libraries, such as jQuery, you must include
+      them as part of your extension.  Twitch does not allow extensions to link
+      to external libraries. -->
+    <script src="jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="viewer.js" type="text/javascript"></script>
+
+    <h2>Hello, World!</h2>
+    <p>Would you care to cycle a color?</p>
+    <div>
+        <input type="button" id="increment" disabled="disabled" value="Yes, I would" />        
+    </div>
+    <div>
+        <p>Clicks: <a id="value">0</a></p>
+    </div>
+    
+        <div id="list">
+    </div>
+</body>
+</html>
